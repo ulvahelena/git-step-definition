@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.2"
+}
+
+group 'Git_Scenario'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation files('libs/agent-java-cucumber.jar')
+    implementation files('libs/staid-openstf-client-1.0.0.jar')
+    implementation 'io.appium:java-client:7.0.0'
+    implementation 'io.github.cdimascio:java-dotenv:5.0.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.11.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.11.2'
+    implementation 'org.slf4j:slf4j-simple:1.7.26'
+    implementation 'com.djdch.log4j:log4j-staticshutdown:1.1.0'
+    implementation 'com.epam.reportportal:agent-java-cucumber:4.0.2'
+    testImplementation 'io.cucumber:cucumber-java8:3.0.2'
+    testImplementation 'io.cucumber:cucumber-junit:3.0.2'
+    testImplementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    testImplementation 'io.rest-assured:rest-assured:3.3.0'
+    testImplementation 'com.github.javafaker:javafaker:0.17.2'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
